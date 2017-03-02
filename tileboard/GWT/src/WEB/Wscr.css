@@ -1,0 +1,461 @@
+/** Add css rules here for your application. */
+	/** Example rules used by the template application (remove for your app) */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #777777;
+	margin: 40px 0px 70px;
+	text-align: center;
+}
+
+/** ************************************************** **/
+	/** Formats for the grids of the square scrabble board **/
+	/** ************************************************** **/
+.gridTable {
+	background-color: DarkRed;
+	font-weight: bold;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+/** Base of grid cells (prototype, not actually used) **/
+.gridCell {
+	background-color: #DEB887;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 10pt;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+/** Unused triple word **/
+.gridTW {
+	color: white;
+	background-color: #FF4500;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 10pt;
+	font-family: monospace;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/** Unused double word **/
+.gridDW {
+	color: white;
+	background-color: #DC133C;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 10pt;
+	font-family: monospace;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/** Unused triple letter **/
+.gridTL {
+	color: white;
+	background-color: #32CD32;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 10pt;
+	font-family: monospace;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/** Unused double letter **/
+.gridDL {
+	color: white;
+	background-color: #1E90FF;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 10pt;
+	font-family: monospace;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/** Unused regular square **/
+.gridRG {
+	color: white;
+	background-color: #B0E0E6;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 10pt;
+	font-family: monospace;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/** Format if a cell is in use **/
+.gridUSE {
+	color: black;
+	background-color: #FFF8DC;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 12pt;
+	font-family: monospace;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/** Format if a cell is part of the new word **/
+.gridSET {
+	color: black;
+	background-color: #FFFFE0;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 12pt;
+	font-family: monospace;
+	font-weight: bold;
+	font-style: italic;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.gridSHOW {
+	color: violet;
+	background-color: yellow;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	font-size: 12pt;
+	font-family: monospace;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.gridOvercell {
+	background: white;
+	text-align: center;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/** **/ /** Base word candidates **/
+.wordList {
+	color: black;
+	background-color: skyblue;
+	text-align: left;
+	margin: 2px;
+	vertical-align: top;
+}
+
+.wordLabel {
+	background-color: lightgray;
+	border: 1px black;
+}
+
+/** Word Content Labels **/
+	/** Label for the value column of word candidates **/
+.wordLabelVal {
+	color: white;
+	background-color: black;
+	text-align: center;
+	vertical-align: middle;
+	width: 38px;
+}
+
+/** Label for the text column of word candidates **/
+.wordLabelText {
+	color: white;
+	background-color: black;
+	text-align: center;
+	vertical-align: middle;
+	width: 132px;
+}
+
+/** Label for the location column of word candidates **/
+.wordLabelLoc {
+	color: white;
+	background-color: black;
+	text-align: center;
+	vertical-align: middle;
+	width: 32px;
+}
+
+/** Word Content Data **/
+	/** Format for the value of a word candidate **/
+.wordListVal {
+	text-align: center;
+	vertical-align: middle;
+	width: 30px;
+	margin: 2px;
+	border: 2px ridge gray;
+}
+
+/** Format for the text of a word candidate **/
+.wordListText {
+	text-align: right;
+	vertical-align: middle;
+	width: 128px;
+	margin: 2px;
+	border: 2px ridge gray;
+}
+
+/** Format for the location of a word candidate **/
+.wordListLoc {
+	text-align: left;
+	vertical-align: middle;
+	width: 25px;
+	margin: 2px;
+	border: 2px ridge gray;
+}
+
+/** Selected Word's  Data **/
+	/** Format for the value of a word candidate **/
+.wordListValSHOW {
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	width: 30px;
+	margin: 2px;
+	border: 2px groove #32CD32;
+	vertical-align: middle;
+}
+
+/** Format for the text of a word candidate **/
+.wordListTextSHOW {
+	text-align: right;
+	font-weight: bold;
+	vertical-align: middle;
+	width: 128px;
+	margin: 2px;
+	border: 2px groove #32CD32;
+}
+
+/** Format for the location of a word candidate **/
+.wordListLocSHOW {
+	text-align: left;
+	font-weight: bold;
+	vertical-align: middle;
+	width: 25px;
+	margin: 2px;
+	border: 2px groove #32CD32;
+}
+
+.rackStyle {
+	text-align: left;
+	vertical-align: middle;
+	font-size: 12pt;
+}
+
+.cellTitle {
+	background-color: black;
+	text-align-center: font-size :               12pt;
+	margin: 1px;
+	font-weight: bold;
+	color: white;
+}
+
+.sendButton {
+	display: block;
+	font-size: 12pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+
+/** New rules for the Wscr application */
+.col-offline {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: black;
+	font-weight: bold;
+	font-size: 14pt;
+	background-color: #FF0066;
+}
+
+.col-passive {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: black;
+	font-weight: bold;
+	font-size: 14pt;
+	background-color: yellow;
+}
+
+.col-active {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: black;
+	font-weight: bold;
+	font-size: 14pt;
+	background-color: #44EE33;
+}
+
+.host-offline {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: black;
+	font-weight: bold;
+	font-size: 12pt;
+	background-color: #FF0066;
+}
+
+.host-passive {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: black;
+	font-weight: bold;
+	font-size: 12pt;
+	background-color: yellow;
+}
+
+.host-active {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: black;
+	font-weight: bold;
+	font-size: 12pt;
+	background-color: #44EE33;
+}
+
+.host-unknown {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: black;
+	font-weight: bold;
+	font-size: 12pt;
+	background-color: #EBECE4;
+}
+
+.host-lookup {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: black;
+	font-weight: bold;
+	font-size: 12pt;
+	background-color: gray;
+}
+
+.host-recheck {
+	font-family: arial, serif;
+	text-align: center;
+	padding: 6px;
+	color: gray;
+	font-weight: bold;
+	font-size: 12pt;
+	background-color: black;
+}
+
+.dataTable {
+	margin-top: 2px;
+	margin-left: 5px;
+	border-collapse: separate;
+	border-spacing: 6px;
+	border: 1px solid #aaa;
+	text-align: center;
+	background-color: #FEFFEF
+}
+
+/* record set rows */
+.rs-selected {
+	background-color: #F8D869;
+}
+
+.rs-hover {
+	background-color: #fdf2cb;
+}
+
+.rs-even {
+	text-align: left;
+	background-color: #E7EEFC;
+}
+
+.rs-odd {
+	text-align: left;
+	background-color: #F0FEFF;
+}
+
+.gwt-TabPanel {
+	margin-top: 9px;
+}
+
+.gwt-TabPanelBottom {
+	background-color: #E8E8E8;
+}
+
+.gwt-TabBar {
+	padding-top: 2px;
+	border-bottom: 4px solid #878787;
+	background-color: #EEF3E2;
+}
+
+.gwt-TabBarItem {
+	padding: 4px;
+	cursor: pointer;
+	font-weight: normal;
+	background-color: #e8e8e8;
+	border-bottom: 2px solid white;
+	margin-right: 2px;
+}
+
+.gwt-TabBarItem-selected {
+	padding: 4px;
+	font-weight: bold;
+	cursor: default;
+	background-color: #878787;
+	border-bottom: 2px solid #87ffff;
+	margin-right: 2px;
+}
+
+.RootStyle {
+	background-color: #EEF3E2;
+}

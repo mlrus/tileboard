@@ -1,0 +1,97 @@
+Phase one of a GWT GUI for analysis of board positions. 
+Please see the screenshot in this directory.
+
+This GWT project currently supports 
+  (a) database retrieval with continuous update, and 
+  (b) dynamic layout and update of system status, and
+  (c) GWT GUI with features
+      i.   Load board
+      ii.  Solve board
+      iii. Select next move (mouseover and click)
+      iv.  Select next tiles (mouseover and type)
+
+
+
+In progress is interactive display of key statistics on 
+benefit and potential risk for an combinatorial decision
+making. This is demonstrated with the words and responses
+for the Scrabble game.
+
+This will enable forensic analysis of an opponent's position,
+as well as picking the next move to make.
+
+In particular, this will investigate the plausibility of a 
+conspiratorial opponent. Such an opponent may be able to 
+exploit extra information (i.e., "cheat") while playing 
+chosen words that have both high probability of occurence, 
+as well as a high score.
+
+
+Within 0.25 seconds of the computer making a move, the user
+is given a list of all user moves that can be made against 
+the computer.  Placing the mouse over a word has the visual
+result of updating the board, but not making the move itself.
+Several seconds later there are extensive statistics on the
+counter-moves which the computer may respond with. These are
+shown in histogrammed form when the mouse moves over each
+word.
+
+The data is extensive, and the distribution is based on the
+hypergeometric distribution which models without replacement.
+
+Here is a partial data snapshot.  It should now be clear why
+a GWT GUI is important to make good sense of this data.
+
+
+
+rack=UAGTFKT
+board=
+       | ABCDEFGHIJKLMNO
+     01| _______WADMAL__
+     02| _____COO____OF_
+     03| ______WED___OR_
+     04| ____________NAB
+     05| _____________PE
+     06| _J____________N
+     07| _ES________M__N
+     08| PEERIE_ZA__I__I
+     09| __E_____TRADUCE
+     10| __DIARIST__G__S
+     11| __L_HE_U___URB_
+     12| _VIVA__N___T_O_
+     13| RIN____L___SOX_
+     14| HAG____I_____Y_
+     15| O______T_______
+
+Moves
+=====
+    2              AE F07
+    2              AI E07
+   ...            ... ....
+   18            TAKA K06
+   18            TUFA K04
+   21            KAIF 14F
+   22             KAF 07E
+   22            KAGU K04
+   22            KUFI E05
+
+
+Countermove Analysis:
+=====================
+ASSUME OUTERWORD: KUFI E05; OUTERSCORE: 22
+    ET:  0.3165 [   ET @B08 13    11.3] [   ET @H03  7    6.08] [   ET @09C  5    4.35]
+                [   ET @12K  2   0.336] [   ET @15G  2   0.336]
+    TU   0.3165 [   UT @06E 13    11.3] [   UT @11H  6    5.22] [   UT @12K  2     1.8]
+                [   UT @15G  2     1.8]
+   ERT   0.3165 [  RET @F10 14    12.2] [  RET @J09 12    1.68]
+    DE:  0.3165 [   ED @B08 15      13] [   DE @09B 15      13] [   ED @H03  8    6.95]
+                [   ED @09C  7    6.08] [   DE @J01  3   0.504] [   DE @J01  3   0.504]
+  DEEJ:  0.3165 [ JEED @B06 15      13]
+   DER:  0.3165 [  RED @F10 16    13.9] [  RED @J09 13    1.82]
+    MU:  0.3282 [   UM @07K  4    3.59] [   MU @07L  4    3.59] [   MU @K01  4    3.59]
+                [   MU @K01  4    3.59]
+   KOR:  0.3295 [  KOR @03L  7    6.31]
+   KST:  0.3295 [  TSK @L12 16    14.4] [  TSK @15H  7    2.46]
+  IKNR:  0.3295 [ RINK @13A 17    15.3] [ RINK @J09 17    1.85]
+
+...
