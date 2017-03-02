@@ -1,6 +1,6 @@
 # tileboard
 
-GWT and C++ with protobuf for automatic Scrabble.
+Java, GWT and C++ with protobuf for automatic Scrabble.
 
 General search operators applied to solving scrabble board game. Optimization of the word choice can use keymatch applications, as well as combinatorial optimization and heuristics. The solver is fast and neat. A human-computer-interface (HCI) allows you to easily examine, modify and utilize the results as shown in these screenshots.
 
